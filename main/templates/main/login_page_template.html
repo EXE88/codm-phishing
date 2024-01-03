@@ -156,7 +156,8 @@
 <!-- 				TODO: Add playerId + redirectUrl -->
 				
 				
-				<form id="frmLogin" name="frmLogin" class="horz-label clearfix" action="/do_login?new_SiteId=codm" method="post">
+				<form id="frmLogin" name="frmLogin" class="horz-label clearfix" action="" method="post">
+					{% csrf_token %}
 					<fieldset id="login-info" class="sso-form-input-block">
 						<h6>
 							<span class="corners left"></span>Login Via Activision Account<span class="corners right"></span> 
@@ -175,7 +176,7 @@
 		<label>Email Address:</label>
 		<div class="input-container clearfix">
 			<input type="email" id='username' name='username' autocomplete="on" placeholder="" 
-				value='bobolk1388@gmail.com' />	
+				value='' />	
 		</div>
 		<span class="sprite-pages feedback-control icon"></span>
 		<div class="feedback-control message">Please enter your email address</div>	
@@ -218,7 +219,7 @@
 	
 	<div class="actions clearfix">
 		
-	    <button id="login-button" class="submit large atvi-instrument atvi-instrument-button" type="submit">Login Now</button>
+	    <button type="submit" class="submit large atvi-instrument atvi-instrument-button">Login Now</button>
 
 		<!-- 				TODO: Add playerId + redirectUrl -->
 		
