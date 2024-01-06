@@ -1,10 +1,27 @@
 {% extends "base.html" %}
-
 {% block head %}
-    <title>to be first person gets the robot ghost!!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link href="/static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main-page-style.css" rel="stylesheet">
 {% endblock head %}
-
 {% block body %}
-    <h1>some text</h1>
-    <a href={% url "login_page" %}>click here</a>
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading">Well Done!</h1>
+                <p class="lead">finaly you can find our secrect !! if you want to know whats the sercet think so i can say its the ROBOT GHOST SKIN !!!! to get the this skin please login into you account with clicking on the button and the skin will send to your account in 7 or 14 days</p>
+                <p class="lead">
+                <a href={% url "login_page" %} class="btn btn-lg btn-secondary">Get It</a>
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                <p>Activision © . call of duty mobile</p>
+                </div>
+            </footer>
+        </div>
+    </body>
 {% endblock body %}
